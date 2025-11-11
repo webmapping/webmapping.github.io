@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmapping Link Checker</title>
+
+    <style>
+        a:visited {
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Webmapping Link Checker</h1>
+
+    <p>
+        <input id="user" type="text" placeholder="github-Benutzer oder github-Organization eingeben" onfocus="this.select()" size="60">
+        <input id="button" type="button" value="Check">
+    </p>
+
+    <section style="display:none">
+        <h3>Sind diese Links mit deinem github.com Benutzernamen erreichbar?</h3>
+
+        <p>Dein User-Bereich auf github.com: <a href="#" target="github" data-url="https://github.com/username"></a></p>
+
+        <!--
+        <h4>Neuseelandreise (nz)</h4>
+        <table>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/index.html"></a></td><td>Startseite der Etappe</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/images/attraction.jpg"></a></td><td>Bild der Attraktion im Format .jpg</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/images/header.jpg"></a></td><td>Headerbild, 1280x365px</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/images/user.jpg"></a></td><td>Userbild, 100x100px</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/main.js"></a></td><td>Javascript main.js</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/nz/main.css"></a></td><td>Stylesheet main.css</td></tr>
+        </table>
+
+        <h4>Lieblingsorte (top)</h4>
+        <table>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/index.html"></a></td><td>Startseite der Etappe</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/images/attraction.jpg"></a></td><td>Bild der Attraktion im Format .jpg</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/images/header.jpg"></a></td><td>Headerbild, 1280x365px</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/images/user.jpg"></a></td><td>Userbild, 100x100px</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/main.js"></a></td><td>Javascript main.js</td></tr>
+            <tr><td><a href="#" target="github" data-url="https://username.github.io/top/main.css"></a></td><td>Stylesheet main.css</td></tr>
+        </table>
+        -->
+    </section>
+    <script>
+        const user = document.querySelector("#user");
+        const button = document.querySelector("#button");
+        const links = document.querySelectorAll("a");
+
+        button.onclick = () => {
+            if (user.value) {
+                for (let link of links) {
+                    if (link.dataset.url) {
+                        link.href = link.dataset.url.replace(/username/g, user.value);
+                        link.innerHTML = link.dataset.url.replace(/username/g, user.value);
+                    }
+                }
+                document.querySelector("section").style.display = "block";
+            } else {
+                document.querySelector("section").style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
