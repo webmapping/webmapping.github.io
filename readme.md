@@ -1,6 +1,6 @@
 # Geoinformatik: Web mapping (26S)
 
-## Klaus Förster, Bernd Öggl, N.N. (Tutorium)
+## Klaus Förster, Bernd Öggl, Daniel Schönung (Tutor)
 
 ### zur Lehrveranstaltung
 
@@ -36,7 +36,7 @@ Alle drei Bestandteile müssen positiv absolviert werden.
 
 ### Regeln
 
-* Aufgaben sind eigenständig zu lösen, Tutor:in zur Unterstützung
+* Aufgaben sind eigenständig zu lösen, Tutor zur Unterstützung
 * Abgabetermine sind strikt einzuhalten
 * durch Fehlen versäumte Inhalte, Arbeitsbeispiele und Workloads sind bis zur nächsten Stunde nachzuholen
 

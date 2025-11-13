@@ -65,4 +65,4 @@ Wir sind schon gespannt auf eure Projektideen!
 
 Happy Hacking!
 
-Klaus, Bernd & N.N.
+Klaus, Bernd & Daniel
